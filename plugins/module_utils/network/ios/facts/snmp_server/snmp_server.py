@@ -94,7 +94,7 @@ class Snmp_serverFacts(object):
         """
         user_sets = snmpv3_user.split("User ")
         user_list = []
-        re_snmp_auth = re.compile(r"^Authentication Protocol:\s*(MD5|SHA|SHA-2)(?:-(\d+))?")
+        re_snmp_auth = re.compile(r"^Authentication Protocol:\s*(SHA-2|SHA|MD5)(?:-(\d+))?")
         re_snmp_priv = re.compile(r"^Privacy Protocol:\s*(3DES|AES|DES)([0-9]*)")
         re_snmp_acl = re.compile(r"^.*active\s+(access-list: (\S+)|)\s*(IPv6 access-list: (\S+)|)")
         for user_set in user_sets:
